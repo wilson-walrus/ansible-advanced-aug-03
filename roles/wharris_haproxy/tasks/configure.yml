@@ -1,0 +1,7 @@
+---
+
+- name: Configure haproxy load balancing
+  template:
+    src: "{{ wharris_haproxy_template }}"
+    dest: /etc/haproxy/haproxy.cfg
+  notify: restart_haproxy

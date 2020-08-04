@@ -1,0 +1,8 @@
+---
+
+wharris_haproxy_load_balancer_packages:
+  - haproxy
+
+wharris_haproxy_template: haproxy.cfg.j2
+
+wharris_haproxy_service: haproxy

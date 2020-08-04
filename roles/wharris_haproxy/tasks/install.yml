@@ -1,0 +1,6 @@
+---
+
+- name: Install load balancer packages
+  package:
+    name: "{{ load_balancer_packages }}"
+    state: present

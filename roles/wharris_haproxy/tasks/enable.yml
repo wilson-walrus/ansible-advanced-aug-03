@@ -1,0 +1,7 @@
+---
+
+- name: Enable Haproxy
+  service:
+    name: "{{ wharris_haproxy_service }}"
+    state: started
+    enabled: true
