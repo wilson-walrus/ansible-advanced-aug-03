@@ -2,18 +2,13 @@
 - name: Deploying Multi Tier App
   hosts: localhost
   gather_facts: false
-  tasks:
 
-    - name: Install and configure postgres
-      import_playbook: postgres.yml
+- import_playbook: postgres.yml
 
-    - name: Deploy webserver and application configuration
-      import_playbook: deploy-application.yml
+- import_playbook: deploy-application.yml
 
-    - name: Install and configure HAproxy
-      import_playbook: deploy-haproxy.yml
-    
-    - name: Check the app deployed successfully
-      import_playbook: smoke-test.yml
+- import_playbook: deploy-haproxy.yml
+
+- import_playbook: smoke-test.yml
 
 ...
